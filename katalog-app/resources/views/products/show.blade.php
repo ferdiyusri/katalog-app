@@ -4,14 +4,6 @@
 
 @section('styles')
 <style>
-    .page-header {
-        background: linear-gradient(135deg, var(--primary) 0%, #16213e 50%, #0f3460 100%);
-        padding: 4.5rem 0 3rem;
-        position: relative;
-    }
-    .breadcrumb-item a { color: var(--accent); text-decoration: none; }
-    .breadcrumb-item.active { color: rgba(255,255,255,0.6); }
-
     .detail-section { padding: 4rem 0; }
 
     .product-img-wrap {
@@ -99,7 +91,6 @@
     .btn-wa:hover { background: #1ebe5d; color: #fff; }
 
     @media (max-width: 768px) {
-        .page-header { padding: 4rem 0 2.5rem; }
         .product-title { font-size: 1.6rem; }
     }
 </style>
@@ -112,19 +103,6 @@
         Pendaftaran berhasil! Anda sekarang dapat melihat harga semua produk kami.
     </div>
     @endif
-
-    <section class="page-header">
-        <div class="container">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb mb-2">
-                    <li class="breadcrumb-item"><a href="{{ url('/') }}">Beranda</a></li>
-                    <li class="breadcrumb-item"><a href="{{ route('products.index') }}">Produk</a></li>
-                    <li class="breadcrumb-item active">{{ $product->name }}</li>
-                </ol>
-            </nav>
-            <h1 style="font-family:'Playfair Display',serif;color:#fff;font-size:2rem;font-weight:700;">{{ $product->name }}</h1>
-        </div>
-    </section>
 
     <section class="detail-section">
         <div class="container">
