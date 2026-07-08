@@ -117,7 +117,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <span class="product-badge">{{ $product->category ? ucwords(str_replace('-', ' ', $product->category)) : 'Produk' }}</span>
+                    <span class="product-badge">{{ ucfirst($product->category ?? 'Produk') }}</span>
                     <h1 class="product-title">{{ $product->name }}</h1>
                     <div class="divider-gold"></div>
 
